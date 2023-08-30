@@ -14,15 +14,53 @@ body {
 }
 
 header {
-  background-color:var(--main-background-color);
+  background-color: var(--main-background-color);
   color: white;
   text-align: center;
-  padding: 1rem 0;
+  
 }
 
 header h2 {
   margin-bottom: 1.5rem;
   font-size: 16px;
+}
+.header-logo{
+  width: 10%;
+  height: 10%;
+  object-fit: cover;
+  object-position: center; 
+}
+.headerTop{
+  display: flex;
+  justify-content: center;
+ background-color: var(--main-background-color);
+}
+
+.headerBottom {
+  background: linear-gradient(#FF6B8B, #ff8800);
+  padding: 2rem 20vw;
+  position: relative;
+  overflow: hidden;
+}
+.custom-shape-divider-bottom-1693426488 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1693426488 svg {
+  position: relative;
+  display: block;
+  width: calc(134% + 1.3px);
+  height: 2.5rem;
+}
+
+.custom-shape-divider-bottom-1693426488 .shape-fill {
+  fill:  #FF6B8B;
 }
 
 h1 {
@@ -33,12 +71,17 @@ nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
+  font-weight: bold;
 }
 
 nav a {
   text-decoration: none;
   color: white;
   margin: 0 1rem;
+}
+nav li :hover {
+  color: #e2fb00;
+  text-decoration: underline;
 }
 
 .featured-post {
