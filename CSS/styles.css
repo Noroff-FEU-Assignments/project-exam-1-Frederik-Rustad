@@ -1,6 +1,8 @@
 :root {
   --post-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   --main-background-color: #333 ;
+  --header-gradiant-color: linear-gradient(#FF6B8B, #ff8800);
+  --hover-links-color: #e2fb00;
 }
 /* Reset some default styles */
 body, h1, h2, h3, p, ul {
@@ -19,26 +21,32 @@ header {
   text-align: center;
   
 }
+header h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 
 header h2 {
   margin-bottom: 1.5rem;
   font-size: 16px;
 }
 .header-logo{
-  width: 10%;
-  height: 10%;
-  object-fit: cover;
-  object-position: center; 
-}
-.headerTop{
+  max-height: 5rem;
   display: flex;
   justify-content: center;
- background-color: var(--main-background-color);
+  background-color: var(--main-background-color);   
+}
+.headerTop{
+  max-height: 5rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  background-color: var(--main-background-color);
 }
 
 .headerBottom {
-  background: linear-gradient(#FF6B8B, #ff8800);
-  padding: 2rem 20vw;
+  background: var(--header-gradiant-color);
+  padding: 1rem 20vw;
   position: relative;
   overflow: hidden;
 }
@@ -50,6 +58,8 @@ header h2 {
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
+  margin-top: 1rem;
+  
 }
 
 .custom-shape-divider-bottom-1693426488 svg {
@@ -72,6 +82,7 @@ nav ul {
   justify-content: center;
   list-style: none;
   font-weight: bold;
+  padding: 0.3rem;
 }
 
 nav a {
@@ -80,7 +91,7 @@ nav a {
   margin: 0 1rem;
 }
 nav li :hover {
-  color: #e2fb00;
+  color: var(--hover-links-color);
   text-decoration: underline;
 }
 
@@ -103,7 +114,7 @@ nav li :hover {
 
 .post-image img {
   display: flex;
-  max-width: 75%;
+  max-width: 55%;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
@@ -163,4 +174,35 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem; 
+    margin-top: 0.5rem ;
+  }
+  header h2 {
+    font-size: 0.8rem;
+    margin-top: -1.5rem;
+  }
+  .headerTop{
+    display: flex;
+    flex-direction: column;
+  }
+  .header-logo{
+   max-width: 20%;
+   background-color: transparent;
+   position: relative;
+   align-self: center;
+   margin-top: 4.5rem;
+  }
+  nav li {
+    font-size: 1rem;
+  }
 }
