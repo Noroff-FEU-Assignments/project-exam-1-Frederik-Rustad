@@ -1,8 +1,9 @@
 :root {
   --post-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   --main-background-color: #333 ;
-  --header-gradiant-color: #fc3560;
+  --header-header-color: #fc3560;
   --hover-links-color: #e2fb00;
+  --font: Arial, sans-serif;
 }
 /* Reset some default styles */
 body, h1, h2, h3, p, ul {
@@ -11,7 +12,7 @@ body, h1, h2, h3, p, ul {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font)
   background-color: #f5f5f5;
 }
 
@@ -36,6 +37,12 @@ header h2 {
   justify-content: center;
   background-color: var(--main-background-color);   
 }
+.black-logo {
+  max-width: 20rem;
+  background-color: transparent;
+  position: relative;
+  align-self: center;
+  margin-top: 1.5rem;}
 .headerTop{
   max-height: 5rem;
   display: flex;
@@ -45,7 +52,7 @@ header h2 {
 }
 
 .headerBottom {
-  background: var(--header-gradiant-color);
+  background: var(--header-header-color);
   padding: 1rem 20vw;
   position: relative;
   overflow: hidden;
@@ -98,9 +105,15 @@ nav li :hover {
   color: var(--hover-links-color);
   text-decoration: underline;
 }
+.page-title {
+  text-align: center;
+  margin: 2rem;
+}
 
 .featured-post,
-.blogArticle {
+.blogArticle,
+.about,
+.contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,6 +123,35 @@ nav li :hover {
   margin: 1rem;
   border-radius: 8px;
   box-shadow:var(--post-shadow)
+}
+/*Button*/
+.CTA {
+  font-family: var(--font);
+  text-decoration: none;
+  padding: 0.5em 0.8em;
+  border-radius: 22px;
+  color: white;
+  background-color: var(--header-header-color);
+  font-size: 20px;
+  letter-spacing: 4px;
+  border: 1px solid var(--header-header-color);
+  transition: all .3s ease;
+  box-shadow: rgb(117, 27, 40) 0px 7px 0px 0px;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.CTA:hover {
+  background-color: white;
+  color:  var(--header-header-color);
+  box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+  cursor: pointer;
+}
+.CTA:active {
+  background-color: var(--header-header-color);
+  color: white;
+  box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 300ms;
 }
 .post-image {
   display: flex;
@@ -132,21 +174,9 @@ nav li :hover {
   margin-bottom: 1rem;
 }
 
-.read-more {
-  background-color: var(--main-background-color);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-  margin-top: 5px;
-}
-
-.read-more:hover {
-  background-color: #555;
-}
 
 .recent-posts {
+  font-family: var(--font);
   text-align: center;
   margin: 2rem;
 }
