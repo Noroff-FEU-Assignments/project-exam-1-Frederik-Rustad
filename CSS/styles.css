@@ -118,7 +118,7 @@ nav li :hover {
 }
 
 .featured-post,
-.blogArticle,
+.blog,
 .about,
 .contact {
   display: flex;
@@ -130,6 +130,16 @@ nav li :hover {
   margin: 1rem;
   border-radius: 8px;
   box-shadow:var(--post-shadow)
+}
+.blogArticle {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blog-image {
+ max-width: 350px;
+  margin: 1rem;
 }
 .Featured-image {
   display: flex;
@@ -268,4 +278,8 @@ footer {
    nav li {
     font-size: 1rem;
   }
+  .blog-image {
+    max-width: 250px;
+    margin: 1rem;
+   }
 }
