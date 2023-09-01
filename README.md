@@ -68,3 +68,7 @@ Note that this is an exam, and therefore tutor support will be limited as per th
 ## Figma Prototype
 
 https://www.figma.com/file/akLcpPbjWaOd8gUvTjOtRy/It's-Blogging-Time!?type=design&node-id=0%3A1&mode=design&t=5Xjl5EUvSop3JCyX-1
+
+## Deployed Netlify Site
+
+https://miniature-magic.netlify.app/archive
