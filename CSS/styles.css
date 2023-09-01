@@ -1,7 +1,7 @@
 :root {
   --post-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   --main-background-color: #333 ;
-  --header-gradiant-color: linear-gradient(#FF6B8B, #ff8800);
+  --header-gradiant-color: #fc3560;
   --hover-links-color: #e2fb00;
 }
 /* Reset some default styles */
@@ -50,6 +50,9 @@ header h2 {
   position: relative;
   overflow: hidden;
 }
+.custom-shape-divider-top-1693425972 {
+  max-height: 50%;
+}
 .custom-shape-divider-bottom-1693426488 {
   position: relative;
   bottom: 0;
@@ -65,12 +68,12 @@ header h2 {
 .custom-shape-divider-bottom-1693426488 svg {
   position: relative;
   display: block;
-  width: calc(134% + 1.3px);
-  height: 2.5rem;
+  width: calc(100% + 2.3px);
+  height: 3.5rem;
 }
 
 .custom-shape-divider-bottom-1693426488 .shape-fill {
-  fill:  #FF6B8B;
+  fill:  #fc3560;
 }
 
 h1 {
@@ -82,6 +85,7 @@ nav ul {
   justify-content: center;
   list-style: none;
   font-weight: bold;
+  font-size: 1.5rem;
   padding: 0.3rem;
 }
 
@@ -95,7 +99,8 @@ nav li :hover {
   text-decoration: underline;
 }
 
-.featured-post {
+.featured-post,
+.blogArticle {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,6 +185,9 @@ footer {
   header h1 {
     font-size: 2.5rem; 
   }
+  nav ul {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -202,7 +210,7 @@ footer {
    align-self: center;
    margin-top: 4.5rem;
   }
-  nav li {
+   nav li {
     font-size: 1rem;
   }
 }
