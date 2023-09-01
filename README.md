@@ -71,4 +71,4 @@ https://www.figma.com/file/akLcpPbjWaOd8gUvTjOtRy/It's-Blogging-Time!?type=desig
 
 ## Deployed Netlify Site
 
-https://miniature-magic.netlify.app/archive
+https://miniature-magic.netlify.app
