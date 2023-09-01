@@ -18,6 +18,11 @@
   margin: 0 auto;
   text-align: center;
 }
+.contact-text{
+  text-align: center;
+  margin: 1rem;
+  max-width: 80%;  
+}
 @media (max-width: 768px) {
   #name,
   #email,

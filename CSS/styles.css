@@ -245,7 +245,26 @@ footer {
   padding: 2rem 0;
   margin-top: 1rem;
 }
-
+@media (max-width: 860px) {
+.latest-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.post {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow:var(--post-shadow);
+    margin: 1rem;
+    max-width: 300px;
+  }
+.arrow {
+  display: none;
+}
+}
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.5rem; 
