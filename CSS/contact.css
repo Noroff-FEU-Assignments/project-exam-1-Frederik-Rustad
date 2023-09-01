@@ -11,10 +11,18 @@
     background-color: #eeeded;
 }
 #message {
-   width: 700px;
+   width: 70vw;
 }
 .submit-cta {
   display: block;
   margin: 0 auto;
   text-align: center;
 }
+@media (max-width: 768px) {
+  #name,
+  #email,
+  #subject,
+  #message {
+    width: 100%;
+  }
+  } 
