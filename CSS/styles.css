@@ -1,3 +1,5 @@
+@import "gallery.css";
+
 :root {
   --post-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   --main-background-color: #333 ;
@@ -5,6 +7,7 @@
   --hover-links-color: #e2fb00;
   --font: Arial, sans-serif;
 }
+
 /* Reset some default styles */
 body, h1, h2, h3, p, ul {
   margin: 0px;
@@ -124,6 +127,12 @@ nav li :hover {
   border-radius: 8px;
   box-shadow:var(--post-shadow)
 }
+.Featured-image {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
 /*Button*/
 .CTA {
   font-family: var(--font);
