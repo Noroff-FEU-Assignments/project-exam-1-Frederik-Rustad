@@ -254,12 +254,16 @@ footer {
   .headerTop{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
   }
-  .header-logo{
+  .headerTop a{
+    display: flex;
+    justify-content: center;
+  }
+  .header-logo{  
    max-width: 20%;
-   background-color: transparent;
-   position: relative;
-   align-self: center;
+   background-color: transparent;   
    margin-top: 4.5rem;
   }
    nav li {
