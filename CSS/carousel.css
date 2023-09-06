@@ -103,8 +103,8 @@
       }
       .carousel-overflow{
         display: flex;
-        overflow: visible;
-        max-height: 100%;
+        overflow: scroll;
+        max-height: 900px;
       }
       .carousel-wrapper{
         display: flex;
