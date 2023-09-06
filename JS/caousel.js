@@ -65,6 +65,7 @@ nextBtn.addEventListener('click', () => {
         currentPosition = 0;
     }
     updateCarousel();
+    console.log(currentPosition);
 });
 
 prevBtn.addEventListener('click', () => {
@@ -73,6 +74,7 @@ prevBtn.addEventListener('click', () => {
         currentPosition = -33.33 * (carouselItems.length - 3);
     }
     updateCarousel();
+    console.log(currentPosition);
 });
 
 function updateCarousel() {

@@ -176,7 +176,9 @@ nav li :hover {
   color: white;
   box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
   transform: translateY(5px);
-  transition: 300ms;
+  transition: 900ms;
+  position: relative;
+  top: 7px;
 }
 .post-image {
   display: flex;
@@ -230,26 +232,7 @@ footer {
   padding: 2rem 0;
   margin-top: 1rem;
 }
-@media (max-width: 940px) {
-.latest-posts {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.post {
-    flex: 1;
-    background-color: white;
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow:var(--post-shadow);
-    margin: 1rem;
-    max-width: 300px;
-  }
-.arrow {
-  display: none;
-}
-}
+
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.5rem; 
