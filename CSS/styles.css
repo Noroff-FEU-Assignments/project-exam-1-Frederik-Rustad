@@ -177,8 +177,8 @@ nav li :hover {
   box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
   transform: translateY(5px);
   transition: 900ms;
-  position: relative;
-  top: 7px;
+ 
+  
 }
 .post-image {
   display: flex;
