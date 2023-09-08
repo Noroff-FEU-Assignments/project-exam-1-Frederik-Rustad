@@ -2,26 +2,39 @@ const apiBase = "https://freddev.no";
 const apiEndpoint = "/wp-json/wp/v2/posts";
 const apiBlogs = apiBase + apiEndpoint;
 
-// Fetching data from API //
+let postsLoaded = 0;
+
 function getPosts() {
-  fetch(apiBlogs)
-    .then(response => response.json())
-    .then(data => {
-      data.sort((a, b) => new Date(b.date) - new Date(a.date));
-      const newestPosts = data
+  const postContainer = document.querySelector(".post-list");
+  const loadMoreButton = document.querySelector(".js-load-more");
 
-      const postContainer = document.querySelector(".post-list");
+  postContainer.innerHTML = '<p>Loading...</p>';
+  postContainer.innerHTML = '';
 
-      // Generate HTML for each post
-      newestPosts.forEach(post => {
-        const html = `<div class="post archive"><a href="blogArticle.html">
-          <img src="${post.jetpack_featured_media_url}">
-          <p class="date">${post.date}</p>
-          <h3>${post.title.rendered}</h3>    
-        </a></div>`;
-        postContainer.innerHTML += html;
+  // Function to fetch and append posts
+  const fetchArchivePosts = () => {
+    fetch(apiBlogs + `?offset=${postsLoaded}&per_page=3`) //change to 10 later//
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(post => {
+          const html = `<div class="post archive"${post.id}><a href="blogArticle.html">
+            <img src="${post.jetpack_featured_media_url}">
+            <p class="date">${post.date}</p>
+            <h3>${post.title.rendered}</h3>    
+          </a></div>`;
+          postContainer.innerHTML += html;
+        });
+
+        postsLoaded += 3; //change to 10 later//
+      })
+      .catch(error => {
+        console.error("Error fetching posts:", error);
+        postContainer.innerHTML = '<p>Error fetching posts. Please refresh or try again later.</p>';
       });
-    });
+  };
+  loadMoreButton.addEventListener('click', fetchArchivePosts);
+
+  fetchArchivePosts();
 }
 
 getPosts();

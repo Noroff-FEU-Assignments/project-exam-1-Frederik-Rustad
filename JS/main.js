@@ -4,15 +4,17 @@ const apiBlogs = apiBase + apiEndpoint;
 
 // Fetching data from API //
 function getPosts() {
+  const postContainer = document.querySelector(".carousel-wrapper");
+
+  postContainer.innerHTML = '<p>Loading...</p>';
   fetch(apiBlogs)
     .then(response => response.json())
     .then(data => {
       data.sort((a, b) => new Date(b.date) - new Date(a.date));
       const newestPosts = data.slice(0, 6);
-
-      const postContainer = document.querySelector(".carousel-wrapper");
-
-      // Generate HTML for each post //
+    
+      postContainer.innerHTML = '';
+      
       newestPosts.forEach(post => {
         const html = `<div class="carousel-item post"><a href="blogArticle.html">
           <img src="${post.jetpack_featured_media_url}">
@@ -21,6 +23,10 @@ function getPosts() {
         </a></div>`;
         postContainer.innerHTML += html;
       });
+    })
+    .catch(error => {
+      console.error("Error fetching posts:", error);
+      postContainer.innerHTML = '<p>Error fetching posts. Please refresh or try again later.</p>';
     });
 }
 
