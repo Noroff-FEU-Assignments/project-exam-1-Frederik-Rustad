@@ -1,6 +1,7 @@
 @import "gallery.css";
 @import "contact.css";
 @import "carousel.css";
+@import "archive.css";
 
 :root {
   --post-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -146,6 +147,9 @@ nav li :hover {
   display: flex;
   justify-content: center;
   align-items: center; 
+}
+.date {
+  font-size: 14px;
 }
 
 
