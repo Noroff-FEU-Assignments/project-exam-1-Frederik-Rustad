@@ -13,7 +13,7 @@ function getPosts() {
 
   // Function to fetch and append posts
   const fetchArchivePosts = () => {
-    fetch(apiBlogs + `?offset=${postsLoaded}&per_page=3`) //change to 10 later//
+    fetch(apiBlogs + `?offset=${postsLoaded}&per_page=6`) //change to 10 later//
       .then(response => response.json())
       .then(data => {
         data.forEach(post => {
@@ -25,7 +25,7 @@ function getPosts() {
           postContainer.innerHTML += html;
         });
 
-        postsLoaded += 3; //change to 10 later//
+        postsLoaded += 6; //change to 10 later//
       })
       .catch(error => {
         console.error("Error fetching posts:", error);
