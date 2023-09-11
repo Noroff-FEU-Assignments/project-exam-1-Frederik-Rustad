@@ -1,4 +1,26 @@
-.archive {
- max-width: 100%;
- margin: 1rem;
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: space-around;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.post.archive {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0.5rem;
+  max-width: 120%;
+}
+
+.post.archive img {
+  height: 100%; 
+  width: auto; 
+}
+.archive h3 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: ;
 }

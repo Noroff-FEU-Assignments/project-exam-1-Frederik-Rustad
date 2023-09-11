@@ -10,13 +10,12 @@ function getPosts() {
 
   postContainer.innerHTML = '<p>Loading...</p>';
   postContainer.innerHTML = '';
-
-  // Function to fetch and append posts
+  
   const fetchArchivePosts = () => {
-    fetch(apiBlogs + `?offset=${postsLoaded}&per_page=6`) //change to 10 later//
-      .then(response => response.json())
-      .then(data => {
-        data.forEach(post => {
+    fetch(apiBlogs + `?offset=${postsLoaded}&per_page=10`) 
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(post => {
           const html = `<div class="post archive"${post.id}><a href="blogArticle.html">
             <img src="${post.jetpack_featured_media_url}">
             <p class="date">${post.date}</p>
@@ -25,7 +24,7 @@ function getPosts() {
           postContainer.innerHTML += html;
         });
 
-        postsLoaded += 6; //change to 10 later//
+        postsLoaded += 10;
       })
       .catch(error => {
         console.error("Error fetching posts:", error);
@@ -36,5 +35,4 @@ function getPosts() {
 
   fetchArchivePosts();
 }
-
 getPosts();
