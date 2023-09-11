@@ -22,19 +22,15 @@ function getPosts() {
             <h3>${post.title.rendered}</h3>    
           </div>`;
           allPosts.push(html);        
-        });
-      
+        });      
         postContainer.innerHTML += allPosts.join('');
-
-        postsLoaded += 10;
-        
+        postsLoaded += 10;        
       })
       .catch(error => {
         console.error("Error fetching posts:", error);
         postContainer.innerHTML = '<p>Error fetching posts. Please refresh or try again later.</p>';
       });
   };
-
   loadMoreButton.addEventListener('click', fetchArchivePosts);
   fetchArchivePosts();
 }
@@ -42,17 +38,11 @@ function getPosts() {
 getPosts();
 
 document.addEventListener('click', function (event) {
-  const postDiv = event.target.closest('.post.archive');
-  
+  const postDiv = event.target.closest('.post.archive');  
   if (postDiv) {
-    event.preventDefault();
-   
+    event.preventDefault();   
     const postID = postDiv.dataset.postId;
-
-    console.log( postID);
-
-    localStorage.setItem('selectedPostID', postID);
-    
+    localStorage.setItem('selectedPostID', postID);    
     window.location.href = `blogArticle.html`;
   }
 });

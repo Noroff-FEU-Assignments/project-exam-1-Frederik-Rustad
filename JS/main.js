@@ -16,11 +16,11 @@ function getPosts() {
       postContainer.innerHTML = '';
       
       newestPosts.forEach(post => {
-        const html = `<div class="carousel-item post"><a href="blogArticle.html">
+        const html = `<div class="carousel-item post" data-post-id="${post.id}">
           <img src="${post.jetpack_featured_media_url}">
           <p class="date">${post.date}</p>
           <h3>${post.title.rendered}</h3>    
-        </a></div>`;
+        </div>`;
         postContainer.innerHTML += html;
       });
     })

@@ -4,11 +4,14 @@ const apiBlogs = apiBase + apiEndpoint;
 const postID = localStorage.getItem('selectedPostID');
 if (postID) {
   const blogArticle = apiBlogs + `/${postID}`;
-  const html = ``;
   fetch(blogArticle)
     .then(response => response.json())
     .then(data => {
-      const htmlContent = data.content.rendered;
+      const htmlContent = 
+      `<h2>${data.title.rendered}</h2>
+      <p> ${data.content.rendered}</p>
+      ${data.date}
+      ${data.comment}`;
       const blogArticleDiv = document.querySelector(".blogArticle");
       blogArticleDiv.innerHTML = htmlContent;
     });

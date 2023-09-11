@@ -28,3 +28,12 @@ function updateCarousel() {
     carouselWrapper.style.transform = `translateX(${currentPosition}%)`;
 }
 
+document.addEventListener('click', function (event) {
+    const postDiv = event.target.closest('.carousel-item.post');  
+    if (postDiv) {
+      event.preventDefault();   
+      const postID = postDiv.dataset.postId;
+      localStorage.setItem('selectedPostID', postID);    
+      window.location.href = `blogArticle.html`;
+    }
+  });

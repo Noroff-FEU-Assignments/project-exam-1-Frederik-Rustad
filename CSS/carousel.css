@@ -28,7 +28,7 @@
     text-align: center;
     box-sizing: border-box; 
     min-width: 32%;  
-            
+    cursor: pointer;            
   }
   #prevBtn,
   #nextBtn {
