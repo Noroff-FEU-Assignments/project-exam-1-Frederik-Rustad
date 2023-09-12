@@ -37,6 +37,7 @@ function getPosts() {
 
 getPosts();
 
+
 document.addEventListener('click', function (event) {
   const postDiv = event.target.closest('.post.archive');  
   if (postDiv) {

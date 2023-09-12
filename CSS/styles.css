@@ -2,6 +2,7 @@
 @import "contact.css";
 @import "carousel.css";
 @import "archive.css";
+@import "blogArticle.css";
 
 :root {
   --post-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -80,6 +81,7 @@ header h2 {
   margin-top: 1rem;
   
 }
+
 
 .custom-shape-divider-bottom-1693426488 svg {
   position: relative;

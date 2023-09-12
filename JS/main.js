@@ -12,9 +12,9 @@ function getPosts() {
     .then(data => {
       data.sort((a, b) => new Date(b.date) - new Date(a.date));
       const newestPosts = data.slice(0, 6);
-    
+
       postContainer.innerHTML = '';
-      
+
       newestPosts.forEach(post => {
         const html = `<div class="carousel-item post" data-post-id="${post.id}">
           <img src="${post.jetpack_featured_media_url}">
@@ -31,38 +31,42 @@ function getPosts() {
 }
 
 getPosts();
-    
+
 // Fetch featured post //
 function getFeaturedPost() {
-  const featuredPostUrl = apiBlogs + "/36"; // <- id  may need to change to get the featured post via tag or category and not the static "/36" //
-
+  const featuredId = 36;
+  const featuredPostUrl = apiBlogs + "/" + featuredId; 
   fetch(featuredPostUrl)
     .then(response => response.json())
     .then(post => {
-      
       const postContainer = document.querySelector(".featured-post");
 
       const html = `
-        <div class="post-image">
-          <a href="blogArticle.html" class="Featured-image">
-            <img src="${post.jetpack_featured_media_url}" alt="Miniature Painting">
-          </a>
-        </div>
-        <div class="post-content">
-          <h2>${post.title.rendered}</h2>
-          <p>${post.excerpt.rendered}</p>
-          <button class="CTA js-featured">Read More</button>
+        <div class="featured">
+          <div class="post-image">
+            <div class="Featured-image">
+              <img src="${post.jetpack_featured_media_url}" alt="Miniature Painting">
+            </div>
+          </div>
+          <div class="post-content" data-post-id="${post.id}">
+            <h2>${post.title.rendered}</h2>
+            <div class="blogRendered">${post.excerpt.rendered}</div>
+            <button class="CTA js-featured">Read More</button>
+          </div>
         </div>`;
       postContainer.innerHTML = html;
 
       const readMoreButton = document.querySelector(".js-featured");
-      readMoreButton.addEventListener('click', function () {
-        window.location.href = "blogArticle.html";
+
+      readMoreButton.addEventListener('click', function (event) {
+        event.preventDefault();  
+        localStorage.setItem('selectedPostID', post.id);
+        window.location.href = `blogArticle.html`;      
       });
-      
+
     })
     .catch(error => {
-      console.error("Error fetching featured post:", error);
+      console.error("Error fetching featured blog:", error);
     });
-}
+  }
 getFeaturedPost();
