@@ -61,6 +61,11 @@
       <h2>Contact</h2>
     </section>
       <section class="contact">
+        <div id="form"></div>
+        <div id="nameErrorMessage"></div>
+        <div id="emailErrorMessage"></div>
+        <div id="subjectErrorMessage"></div>
+        <div id="messageErrorMessage"></div>
         <form action="#" method="POST">
           <label for="name">Name:</label><br>
           <input type="text" id="name" name="name" required><br><br>
@@ -74,7 +79,7 @@
           <label for="message">Message:</label><br>
           <textarea id="message" name="message" rows="8" required></textarea><br><br>
   
-          <input type="submit" value="Submit" class="CTA submit-cta">
+          <input type="submit" value="Submit" id="submit" class="CTA submit-cta">
       </form>
       <div class="contact-text">
       <h2>Requests and Commissions Closed</h2><br><br>
@@ -91,5 +96,6 @@ I would love to hear from you!"</div>
     <footer>
         <p>&copy; 2023 Miniature Magic. All rights reserved.</p>
     </footer>
+    <script src="JS/contactForm.js"></script>
 </body>
 </html>

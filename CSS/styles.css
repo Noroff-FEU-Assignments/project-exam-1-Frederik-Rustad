@@ -81,7 +81,13 @@ header h2 {
   margin-top: 1rem;
   
 }
-
+#nameErrorMessage,
+#emailErrorMessage,
+#messageErrorMessage,
+#subjectErrorMessage {
+  color: red;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
 .custom-shape-divider-bottom-1693426488 svg {
   position: relative;
