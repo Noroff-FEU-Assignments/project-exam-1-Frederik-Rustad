@@ -14,8 +14,8 @@ form.addEventListener('submit', function (e) {
 
   let isValid = true; 
 
-  if (name.value.length < 5) {
-    nameErrorElement.innerHTML = 'Name must be at least 5 characters';
+  if (name.value.length < 6) {
+    nameErrorElement.innerHTML = 'Name must be more than 5 characters';
     isValid = false; 
   } else {
     nameErrorElement.innerHTML = '';
