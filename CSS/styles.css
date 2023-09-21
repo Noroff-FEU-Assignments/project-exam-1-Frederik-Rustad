@@ -140,6 +140,18 @@ nav li :hover {
   border-radius: 8px;
   box-shadow:var(--post-shadow)
 }
+.welcome-post{
+  flex-direction: row;
+}
+.welcome-message{
+  max-width: 500px;
+  margin: 1rem;
+  text-align: center;
+}
+.welcome-img{
+  max-width: 300px;
+  height: auto;
+}
 .blogArticle {
   max-width: 80%;
   display: flex;
@@ -194,7 +206,7 @@ nav li :hover {
 .post-image img {
   display: flex;
   max-width: 55%;
-  border-radius: 8px;
+  border-radius: 8px; 
   margin-bottom: 1rem;
 }
 
@@ -238,6 +250,12 @@ footer {
   }
   nav ul {
     font-size: 1rem;
+  }
+  .welcome-post{
+    flex-direction: column;
+  }
+  .welcome-img {
+    max-width: 150px;
   }
 }
 
