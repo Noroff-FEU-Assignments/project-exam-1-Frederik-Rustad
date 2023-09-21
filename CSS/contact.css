@@ -10,6 +10,12 @@
     resize: vertical;
     background-color: #eeeded;
 }
+#nameErrorMessage,
+#emailErrorMessage,
+#messageErrorMessage,
+#subjectErrorMessage {
+  color: red;
+}
 #message {
    width: 70vw;
 }
@@ -30,4 +36,10 @@
   #message {
     width: 100%;
   }
+  #nameErrorMessage,
+#emailErrorMessage,
+#messageErrorMessage,
+#subjectErrorMessage {
+  font-size: 0.8rem;
+}
   } 

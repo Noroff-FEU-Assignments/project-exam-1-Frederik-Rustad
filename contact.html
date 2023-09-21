@@ -62,22 +62,26 @@
     </section>
       <section class="contact">
         <div id="form"></div>
-        <div id="nameErrorMessage"></div>
-        <div id="emailErrorMessage"></div>
-        <div id="subjectErrorMessage"></div>
-        <div id="messageErrorMessage"></div>
+        
+        
+        
+        
         <form action="#" method="POST">
           <label for="name">Name:</label><br>
           <input type="text" id="name" name="name" required><br><br>
+          <div id="nameErrorMessage"></div>
   
           <label for="email">Email:</label><br>
           <input type="email" id="email" name="email" required><br><br>
+          <div id="emailErrorMessage"></div>
   
           <label for="subject">Subject:</label><br>
           <input type="text" id="subject" name="subject" required><br><br>
+          <div id="subjectErrorMessage"></div>
   
           <label for="message">Message:</label><br>
           <textarea id="message" name="message" rows="8" required></textarea><br><br>
+          <div id="messageErrorMessage"></div>
   
           <input type="submit" value="Submit" id="submit" class="CTA submit-cta">
       </form>

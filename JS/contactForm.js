@@ -22,7 +22,7 @@ form.addEventListener('submit', function (e) {
   }
 
   if (subject.value.length < 15) {
-    subjectErrorElement.innerHTML = 'Subject should be more than 15 characters long';
+    subjectErrorElement.innerHTML = 'Subject should be more than 15 characters';
     isValid = false; 
   } else {
     subjectErrorElement.innerHTML = '';
@@ -37,7 +37,7 @@ form.addEventListener('submit', function (e) {
   }
 
   if (message.value.length < 25) {
-    messageErrorElement.innerHTML = 'Message should be more than 25 characters long';
+    messageErrorElement.innerHTML = 'Message should be more than 25 characters';
     isValid = false; 
   } else {
     messageErrorElement.innerHTML = '';
