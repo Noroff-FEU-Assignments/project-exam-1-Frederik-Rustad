@@ -16,11 +16,12 @@ function getPosts() {
       .then(data => {
         postContainer.innerHTML = '';
         data.forEach(post => {
-          const html = `<div class="post archive" data-post-id="${post.id}">
+          const html = `<a class='post archive' href='blogArticle.html?id=${post.id}'>
             <img src="${post.jetpack_featured_media_url}" class="postImg">
             <p class="date">${post.date}</p>
             <h3>${post.title.rendered}</h3>    
-          </div>`;
+          
+          </a>`;
           allPosts.push(html);        
         });      
         postContainer.innerHTML += allPosts.join('');
@@ -36,14 +37,3 @@ function getPosts() {
 }
 
 getPosts();
-
-
-document.addEventListener('click', function (event) {
-  const postDiv = event.target.closest('.post.archive');  
-  if (postDiv) {
-    event.preventDefault();   
-    const postID = postDiv.dataset.postId;
-    localStorage.setItem('selectedPostID', postID);    
-    window.location.href = `blogArticle.html`;
-  }
-});

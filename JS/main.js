@@ -1,8 +1,8 @@
 const apiBase = "https://freddev.no";
 const apiEndpoint = "/wp-json/wp/v2/posts";
 const apiBlogs = apiBase + apiEndpoint;
-
-// Fetching data from API //
+console.log('main.js is connected!');
+// Fetching data from API, and render carousel-item 's //
 function getPosts() {
   const postContainer = document.querySelector(".carousel-wrapper");
 
@@ -11,17 +11,22 @@ function getPosts() {
     .then(response => response.json())
     .then(data => {
       data.sort((a, b) => new Date(b.date) - new Date(a.date));
-      const newestPosts = data.slice(0, 6);
+      const newestPosts = data.slice(0, 9);
 
       postContainer.innerHTML = '';
 
-      newestPosts.forEach(post => {
-        const html = `<div class="carousel-item post" data-post-id="${post.id}">
-          <img src="${post.jetpack_featured_media_url}">
+      newestPosts.forEach((post, index) => {
+        
+        const visibilityClass = index < 3 ? 'visible' : 'hidden';
+      
+        const html = `<div class='carousel-item ${visibilityClass}'><a class='post-link' href='blogArticle.html?id=${post.id}'><div class="carousel-post">
+          <img src="${post.jetpack_featured_media_url}" class="carousel-image">
           <p class="date">${post.date}</p>
           <h3>${post.title.rendered}</h3>    
+        </div>
+        </a>
         </div>`;
-        postContainer.innerHTML += html;
+        postContainer.innerHTML += html;        
       });
     })
     .catch(error => {
@@ -32,41 +37,56 @@ function getPosts() {
 
 getPosts();
 
-// Fetch featured post //
-function getFeaturedPost() {
-  const featuredId = 36;
-  const featuredPostUrl = apiBlogs + "/" + featuredId; 
-  fetch(featuredPostUrl)
-    .then(response => response.json())
-    .then(post => {
-      const postContainer = document.querySelector(".featured-post");
 
-      const html = `
-        <div class="featured">
-          <div class="post-image">
-            <div class="Featured-image">
-              <img src="${post.jetpack_featured_media_url}" alt="Miniature Painting">
-            </div>
-          </div>
-          <div class="post-content" data-post-id="${post.id}">
-            <h2>${post.title.rendered}</h2>
-            <div class="blogRendered">${post.excerpt.rendered}</div>
-            <button class="CTA js-featured">Read More</button>
-          </div>
-        </div>`;
-      postContainer.innerHTML = html;
+//carousel
+let visibleIndex = 0;
+let carouselItems; 
 
-      const readMoreButton = document.querySelector(".js-featured");
+function updateVisibility() {
+  carouselItems = document.querySelectorAll('.carousel-item');
+  carouselItems.forEach((item, index) => {
+    if (index >= visibleIndex && index < visibleIndex + 3) {
+      item.classList.add('visible');
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
+      item.classList.remove('visible');
+    }
+  });
+}
 
-      readMoreButton.addEventListener('click', function (event) {
-        event.preventDefault();  
-        localStorage.setItem('selectedPostID', post.id);
-        window.location.href = `blogArticle.html`;      
-      });
-
-    })
-    .catch(error => {
-      console.error("Error fetching featured blog:", error);
-    });
+document.querySelector('.prev-button').addEventListener('click', () => {
+  if (visibleIndex > 0) {
+    visibleIndex -= 3;
+  } else {    
+    visibleIndex = carouselItems.length - 3;
   }
-getFeaturedPost();
+  updateVisibility();
+});
+
+document.querySelector('.next-button').addEventListener('click', () => {
+  if (visibleIndex + 3 < carouselItems.length) {
+    visibleIndex += 3;
+  } else {
+     visibleIndex = 0;
+  }
+  updateVisibility();
+});
+
+updateVisibility();
+
+
+// `<a class='carousel-item archive' href='blogArticle.html?id=${post.id}'><div class="carousel-post ">
+//         <img src="${post.jetpack_featured_media_url}" class="postImg">
+//         <p class="date">${post.date}</p>
+//         <h3>${post.title.rendered}</h3>    
+//       </div>
+//       </a>`
+
+// `<div class='carousel-item' ><a class='post-link' href='blogArticle.html?id=${post.id}'><div class="carousel-post ">
+//         <img src="${post.jetpack_featured_media_url}" class="carousel-image">
+//         <p class="date">${post.date}</p>
+//         <h3>${post.title.rendered}</h3>    
+//       </div>
+//       </a>
+//       </div>`

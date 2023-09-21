@@ -1,3 +1,13 @@
+.post,
+.carousel-post {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;    
+  box-shadow:var(--post-shadow);
+  max-width: 10rem;
+}  
+
 .post-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -15,12 +25,20 @@
   cursor: pointer;
 }
 
+.post img {
+  max-width: 259px;
+  max-height: 195px;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
 .postImg {
   height: 100%; 
   margin-left: auto;
   margin-right: auto;
   
 }
+
 .archive h3 {
   text-align: center;
   margin-top: 1rem;

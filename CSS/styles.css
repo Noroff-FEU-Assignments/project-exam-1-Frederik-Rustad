@@ -12,7 +12,6 @@
   --font: Arial, sans-serif;
 }
 
-/* Reset some default styles */
 body, h1, h2, h3, p, ul {
   margin: 0px;
   padding: 0px;
@@ -127,7 +126,7 @@ nav li :hover {
   margin: 2rem;
 }
 
-.featured-post,
+.welcome-post,
 .blog,
 .about,
 .contact {
@@ -151,11 +150,7 @@ nav li :hover {
  max-width: 350px;
   margin: 1rem;
 }
-.Featured-image {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-}
+
 .date {
   font-size: 14px;
 }
@@ -189,8 +184,6 @@ nav li :hover {
   box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
   transform: translateY(5px);
   transition: 900ms;
- 
-  
 }
 .post-image {
   display: flex;

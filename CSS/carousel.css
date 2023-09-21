@@ -2,14 +2,12 @@
   display: flex;
   position: relative;
   justify-content: center;
-  align-self: center;
+  align-items: center; 
   overflow: hidden;
-  
+  max-width: 800px;
+  margin: 0 auto;
+  height: 300px; 
 }
-.carousel-overflow {
-  display: flex;
-  overflow: hidden;
- }
  
  .carousel-wrapper {
    display: flex; 
@@ -17,108 +15,105 @@
    transition: transform 1.5s ease;
    z-index: 0;   
    gap: 1rem; 
-  }
-  .carousel-container div {
-    position: relative;
-  }       
+   max-width: 90%;
+   overflow: hidden;
+  }    
+
   .carousel-item {
-    flex: 0 0 33.33%; 
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    box-sizing: border-box; 
-    min-width: 32%;  
-    cursor: pointer;            
-  }
-  #prevBtn,
-  #nextBtn {
-    z-index: 2;
-  }
-  .arrow {
     display: flex;
-    align-items: center; 
-    justify-content: center;
-    width: 2rem;
-    height: 300px;
-    background-color: rgb(244, 240, 240);
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow:var(--post-shadow);
-    font-size: 40px;
-    border: solid 1px rgb(244, 240, 240);
-    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    height: 300px;   
+  }  
+  .carousel-image {
+    max-width: 100%;
   }
-  .arrow:hover {
-    background-color: rgb(231, 230, 230);
-    cursor: pointer;
+  .prev-button{
+    position: absolute;    
+    left: 0;
+    }
+  .next-button{
+    position: absolute;
+    right: 0;
   }
-  .post {
-    flex: 1;
-    background-color: white;
-    border-radius: 8px;
-    padding: 1rem;    
-    box-shadow:var(--post-shadow);
-    max-width: 10rem;
+.prev-button, 
+.next-button{
+  background-color: var(--header-header-color);
+  color: white;
+  font-size: 2rem;
+  border-radius: 8px;  
+  height: 50px;
+  width: 50px;
+  z-index: 1;
+  cursor: pointer;
+  border: none;
+  background-color: var(--header-header-color);
+  font-size: 20px;
+  letter-spacing: 4px;
+  border: 1px solid var(--header-header-color);
+  transition: all .3s ease;
+  box-shadow: rgb(117, 27, 40) 0px 7px 0px 0px;
+}
+.prev-button:hover, 
+.next-button:hover {
+  background-color: white;
+  color:  var(--header-header-color);
+  box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+  cursor: pointer;
+}
+.prev-button:active, 
+.next-button:active {
+  background-color: var(--header-header-color);
+  color: white;
+  box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 900ms;
+}
+
+  .hidden{
+    display: none;
   }
-  
-  .post img {
-    max-width: 259px;
-    max-height: 195px;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
+  .visible{
+    display: block;
   }
+
   
   @media (max-width: 1110px) {
     h3 {
       font-size: 0.9rem;
-    }
-
-    .carousel-container {
-
-      
-    }
-    .carousel-item {
-       
-      flex: 0 0 50%;
-      min-width: 50%;
-              
-    }
+    }       
     .post {
       max-width: 5rem;
     }
-
-      .carousel-overflow{
-        display: flex;
-        overflow: hidden;
-       
-      }
-   
+  
     }
     @media screen and (max-width: 630px) {
       .carousel-item {
           flex: 0 0 100%; 
           max-width: 100%;
       }
-      .arrow {
-        display: none;
-      }
+  
       .carousel-container{
-        
-      }
-      .carousel-overflow{
         display: flex;
-        overflow: scroll;
-        max-height: 900px;
+        flex-direction: column;   
+        margin-right: auto;
+        margin-left: auto;     
       }
+      
       .carousel-wrapper{
         display: flex;
         flex-direction: column;
         max-width: 100%;
       }
-       
-      .post {
-        max-height: 300px;
-        margin-bottom: 1rem;
+      .post-link {
+        max-width: 100%;
       }
+       
+      
+      .prev-button, 
+      .next-button{
+        display: none;
+      }
+
 }
-/* moblie view, the last div in teh carousel wrapper gets hidden behinde the footer */
