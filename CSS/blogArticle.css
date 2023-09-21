@@ -1,6 +1,6 @@
 figure.wp-block-gallery img{
  display: block;
- max-width: 50vw;
+ max-width: 30vw;
  height: auto;
  cursor: pointer;
 }
@@ -55,6 +55,9 @@ figure.modal img {
   font-size: 1rem;
   max-width: 80%;
 }
+figure.wp-block-gallery img{  
+  max-width: 50vw; 
+ }
 figure.modal img {
   display: block;
   max-width: 120%;
