@@ -6,7 +6,8 @@
   overflow: hidden;
   max-width: 800px;
   margin: 0 auto;
-  height: 300px; 
+  padding: 2rem;
+  height: 320px; 
 }
  
  .carousel-wrapper {
@@ -22,12 +23,27 @@
   .carousel-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center; 
-    height: 300px;   
+    justify-content: center;
+    margin: 0.5rem;
+    max-width: 120%;
+    cursor: pointer;
   }  
+  .carousel-post{
+  height: 280px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;    
+  box-shadow:var(--post-shadow);
+  max-width: 10rem;
+  }
   .carousel-image {
-    max-width: 100%;
+  max-width: 160px;
+  max-height: 160px;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  height: 100%; 
+  margin-left: auto;
+  margin-right: auto;
   }
   .prev-button{
     position: absolute;    

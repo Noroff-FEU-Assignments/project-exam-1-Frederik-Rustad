@@ -1,5 +1,5 @@
-.post,
-.carousel-post {
+.post
+ {
   flex: 1;
   background-color: white;
   border-radius: 8px;
