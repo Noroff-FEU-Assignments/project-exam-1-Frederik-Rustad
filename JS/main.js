@@ -6,7 +6,7 @@ console.log('main.js is connected!');
 function getPosts() {
   const postContainer = document.querySelector(".carousel-wrapper");
 
-  postContainer.innerHTML = '<p>Loading...</p>';
+  postContainer.innerHTML = '<div class="loader"></div>';
   fetch(apiBlogs)
     .then(response => response.json())
     .then(data => {

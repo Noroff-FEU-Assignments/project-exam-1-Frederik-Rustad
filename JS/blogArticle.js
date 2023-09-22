@@ -8,6 +8,9 @@ if (!postID) {
   console.error('Post ID not found in URL');
 } else {
   const blogArticle = apiBlogs + `/${postID}`;
+  const blogArticleDiv = document.querySelector(".blogArticle");
+
+  blogArticleDiv.innerHTML = '<div class="loader"></div>'; 
   
   fetch(blogArticle)
     .then(response => response.json())
@@ -19,7 +22,6 @@ if (!postID) {
         </div>
         ${data.date}
       `;
-
       const blogArticleDiv = document.querySelector(".blogArticle");
       blogArticleDiv.innerHTML = htmlContent;
       //modal
