@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Show navigation again above 480px width
-
 // might be unnesasary, now that i think about it, whom other than devs go from mobile view to desktop on the same device?, well its here and it works.
 export function showNavigation() {
   const navigation = document.querySelector('.navigation');
@@ -25,6 +24,5 @@ export function showNavigation() {
     navigation.style.display = 'none';
   }
 }
-
 window.addEventListener('load', showNavigation);
 window.addEventListener('resize', showNavigation);

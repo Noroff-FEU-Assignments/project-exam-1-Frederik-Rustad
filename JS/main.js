@@ -74,21 +74,3 @@ document.querySelector('.next-button').addEventListener('click', () => {
 });
 
 updateVisibility();
-
-// Navigation
-
-document.addEventListener('DOMContentLoaded', function() {
-  const navigation = document.querySelector('.navigation');
-  const hamburgerButton = document.querySelector('.hamburger-button');
-
-  function toggleNavigation() {
-    if (navigation.style.display === 'block') {
-      navigation.style.display = 'none';
-    } else {
-      navigation.style.display = 'block';
-    }
-  }
-  hamburgerButton.addEventListener('click', toggleNavigation);
-});
-
-showNavigation();
