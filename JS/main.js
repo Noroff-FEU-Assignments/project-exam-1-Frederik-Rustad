@@ -1,7 +1,7 @@
+import { showNavigation } from './hamburger.js';
 const apiBase = "https://freddev.no";
 const apiEndpoint = "/wp-json/wp/v2/posts";
 const apiBlogs = apiBase + apiEndpoint;
-console.log('main.js is connected!');
 // Fetching data from API, and render carousel-item 's //
 function getPosts() {
   const postContainer = document.querySelector(".carousel-wrapper");
@@ -75,18 +75,20 @@ document.querySelector('.next-button').addEventListener('click', () => {
 
 updateVisibility();
 
+// Navigation
 
-// `<a class='carousel-item archive' href='blogArticle.html?id=${post.id}'><div class="carousel-post ">
-//         <img src="${post.jetpack_featured_media_url}" class="postImg">
-//         <p class="date">${post.date}</p>
-//         <h3>${post.title.rendered}</h3>    
-//       </div>
-//       </a>`
+document.addEventListener('DOMContentLoaded', function() {
+  const navigation = document.querySelector('.navigation');
+  const hamburgerButton = document.querySelector('.hamburger-button');
 
-// `<div class='carousel-item' ><a class='post-link' href='blogArticle.html?id=${post.id}'><div class="carousel-post ">
-//         <img src="${post.jetpack_featured_media_url}" class="carousel-image">
-//         <p class="date">${post.date}</p>
-//         <h3>${post.title.rendered}</h3>    
-//       </div>
-//       </a>
-//       </div>`
+  function toggleNavigation() {
+    if (navigation.style.display === 'block') {
+      navigation.style.display = 'none';
+    } else {
+      navigation.style.display = 'block';
+    }
+  }
+  hamburgerButton.addEventListener('click', toggleNavigation);
+});
+
+showNavigation();

@@ -133,3 +133,10 @@
       }
 
 }
+@media screen and (max-width: 480px) {
+  .carousel-container {
+    height: 100%;
+    padding: 0;
+    overflow: scroll;
+  }  
+}

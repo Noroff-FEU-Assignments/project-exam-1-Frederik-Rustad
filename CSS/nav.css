@@ -1,0 +1,61 @@
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 1rem;
+}
+nav li :hover {
+  color: var(--hover-links-color);
+  text-decoration: underline;
+}
+.navigation {
+  display: block;
+}
+.hamburger-button {
+  display: none;
+}
+
+@media (max-width: 480px) {
+
+  nav ul {   
+   flex-direction: column;
+   padding: 0;
+   
+  }
+  nav li {
+    padding: 10px;
+    
+  }
+  nav a {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+  }
+ 
+.navigation {
+  display: none;
+}
+
+.hamburger-button {
+  display: block;
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hamburger-button:active {
+  color: black;
+}
+}

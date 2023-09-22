@@ -3,6 +3,7 @@
 @import "carousel.css";
 @import "archive.css";
 @import "blogArticle.css";
+@import "nav.css";
 @import "loader.css";
 
 :root {
@@ -98,24 +99,7 @@ h1 {
 font-size: 44px;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  font-weight: bold;
-  font-size: 1.5rem;
-  padding: 0.3rem;
-}
 
-nav a {
-  text-decoration: none;
-  color: white;
-  margin: 0 1rem;
-}
-nav li :hover {
-  color: var(--hover-links-color);
-  text-decoration: underline;
-}
 .page-title {
   text-align: center;
   margin: 2rem;

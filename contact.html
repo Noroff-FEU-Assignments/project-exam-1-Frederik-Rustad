@@ -41,21 +41,21 @@
           <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
       </svg>      
     </div>
-      <div class="headerBottom"><nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="archive.html">Archive</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-            <ul>
-              <li><a href="tutorials.html">Tutorials</a></li>
-              <li><a href="https://www.instagram.com/arc_hound/">Instagram</a></li>
-              <li><a href="contact.html"><u>Contact</u></a></li>
-              <li></li>
-            </ul>
-        </nav>
-      </div>
+    <div class="headerBottom">
+      <button class="hamburger-button">&#9776;</button>
+      <nav class="navigation">
+        <ul>
+          <li><a href="index.html"><u>Home</u></a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <ul>          
+          <li><a href="https://www.instagram.com/arc_hound/">Instagram</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
     </header>
     <section class=" page-title">
       <h2>Contact</h2>
@@ -63,25 +63,22 @@
       <section class="contact">
         <div id="form"></div>
         
-        
-        
-        
         <form action="#" method="POST">
           <label for="name">Name:</label><br>
-          <input type="text" id="name" name="name" required><br><br>
           <div id="nameErrorMessage"></div>
+          <input type="text" id="name" name="name" required><br><br>
   
           <label for="email">Email:</label><br>
-          <input type="email" id="email" name="email" required><br><br>
           <div id="emailErrorMessage"></div>
+          <input type="email" id="email" name="email" required><br><br>
   
           <label for="subject">Subject:</label><br>
-          <input type="text" id="subject" name="subject" required><br><br>
           <div id="subjectErrorMessage"></div>
+          <input type="text" id="subject" name="subject" required><br><br>
   
           <label for="message">Message:</label><br>
-          <textarea id="message" name="message" rows="8" required></textarea><br><br>
           <div id="messageErrorMessage"></div>
+          <textarea id="message" name="message" rows="8" required></textarea><br><br>
   
           <input type="submit" value="Submit" id="submit" class="CTA submit-cta">
       </form>
@@ -101,5 +98,6 @@ I would love to hear from you!"</div>
         <p>&copy; 2023 Miniature Magic. All rights reserved.</p>
     </footer>
     <script src="JS/contactForm.js"></script>
+    <script src="JS/hamburger.js" type="module"></script>
 </body>
 </html>
