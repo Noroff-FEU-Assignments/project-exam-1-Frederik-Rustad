@@ -135,6 +135,7 @@ font-size: 44px;
   font-size: 1.2rem;
   margin: 1rem;
   text-align: center;
+  text-wrap: balance;
   }
 .blogArticle {
   max-width: 80%;
