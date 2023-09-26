@@ -59,7 +59,7 @@ document.querySelector('.prev-button').addEventListener('click', () => {
   if (visibleIndex > 0) {
     visibleIndex -= 3;
   } else {    
-    visibleIndex = carouselItems.length - 3;
+    visibleIndex = 6;
   }
   updateVisibility();
 });
@@ -68,7 +68,7 @@ document.querySelector('.next-button').addEventListener('click', () => {
   if (visibleIndex + 3 < carouselItems.length) {
     visibleIndex += 3;
   } else {
-     visibleIndex = 0;
+     visibleIndex = 3;
   }
   updateVisibility();
 });
