@@ -31,6 +31,7 @@ function getPosts() {
 
   loadMoreButton.addEventListener('click', () => {
     fetchPosts(postsLoaded, 10);
+    document.querySelector(".js-load-more").style.display = "none"; //for now this will hide the load more button when it's clicked becouse i only have 20 posts total. I'll rework it later if i have time to dissapear only if there is no more posts to fetch.
   });
 
   fetchPosts(postsLoaded, 10);
