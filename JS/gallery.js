@@ -5,7 +5,6 @@
       imageElements.forEach(imageElement => {
         imageElement.addEventListener('click', (event) => {
           event.stopPropagation();
-          console.log('image clicked');
           imageElement.classList.add(modalClass);      
        
           document.addEventListener('click', (e) => {

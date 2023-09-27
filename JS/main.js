@@ -44,16 +44,26 @@ let carouselItems;
 
 function updateVisibility() {
   carouselItems = document.querySelectorAll('.carousel-item');
-  carouselItems.forEach((item, index) => {
-    if (index >= visibleIndex && index < visibleIndex + 3) {
+  
+  if (window.innerWidth < 630) {
+    carouselItems.forEach(item => {
       item.classList.add('visible');
       item.classList.remove('hidden');
-    } else {
-      item.classList.add('hidden');
-      item.classList.remove('visible');
-    }
-  });
+    });
+  } else {
+    carouselItems.forEach((item, index) => {
+      if (index >= visibleIndex && index < visibleIndex + 3) {
+        item.classList.add('visible');
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+        item.classList.remove('visible');
+      }
+    });
+  }
 }
+
+window.addEventListener('resize', updateVisibility);
 
 document.querySelector('.prev-button').addEventListener('click', () => {
   if (visibleIndex > 0) {
@@ -73,4 +83,4 @@ document.querySelector('.next-button').addEventListener('click', () => {
   updateVisibility();
 });
 
-updateVisibility();
+updateVisibility(); 
