@@ -69,9 +69,11 @@ Note that this is an exam, and therefore tutor support will be limited as per th
 
 https://www.figma.com/file/akLcpPbjWaOd8gUvTjOtRy/It's-Blogging-Time!?type=design&node-id=0%3A1&mode=design&t=5Xjl5EUvSop3JCyX-1
 
+## Trello board
+
+![trello](https://github.com/Noroff-FEU-Assignments/project-exam-1-Frederik-Rustad/assets/119454117/63b64e55-d7aa-433d-9e97-064fbe6646ec)
+
 ## Deployed Netlify Site
 
 https://miniature-magic.netlify.app
-
-![trello](https://github.com/Noroff-FEU-Assignments/project-exam-1-Frederik-Rustad/assets/119454117/63b64e55-d7aa-433d-9e97-064fbe6646ec)
 
