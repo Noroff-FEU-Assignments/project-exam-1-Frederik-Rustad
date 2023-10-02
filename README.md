@@ -1,4 +1,73 @@
-## Project Exam 1
+# Minature Magic Blog 
+
+![Blog screenshot](Images/blog.jpg)
+
+[Minature Magic Blog ](https://miniature-magic.netlify.app/)
+
+The project involves the creation of a blog website named "Miniature Magic," dedicated to the art of miniature painting.
+The main goal was to implement blogs dynamicly from wordpress to the site.
+
+## Description
+
+ I have created an Blog website focused on the Miniature painting hobby. 
+ The project aims to simulate the development and launch of an Blogging website. 
+ This includes the design, development, and implementation of a user-friendly and visually appealing website where people can browse,
+ select, and read various posts included in the hobby.
+
+## Website Design and Layout:
+
+- Create an intuitive and user-friendly website layout that provides easy navigation.
+- Choose a color scheme and design elements that resonate with the theme GrimDark and vibrant colors.
+- Ensure that the website is responsive and accessible on various devices (desktop, tablet, mobile).
+
+## Archive:
+
+- Organize the posts into an archive with thumbnails for each post.
+- Sort by newes or oldest post first.
+
+
+# Buuilt with
+
+- Html
+- CSS
+- JavaScript
+
+
+## GitHub
+
+```
+https://github.com/Noroff-FEU-Assignments/project-exam-1-Frederik-Rustad.git
+```
+
+ ## Contributing
+
+ ## Contact
+[My Twitter page](https://twitter.com/Penrose_Studio)
+
+[Frerus50251@stud.noroff.no](Frerus50251@stud.noroff.no)
+
+##  References
+
+-	Flexbox Crash Course https://www.youtube.com/watch?v=3YW65K6LcIA 
+-	CSS Grids Crash Course https://www.youtube.com/watch?v=0xMQfnTU6oo&t=1735s
+-	JavaScript course - SuperSimpleDev
+
+
+##  Acknowledgements
+   
+Morten Olsen - User testing
+Dag Andrè jordansen - User testing
+Thomas Theodorsen - User testing
+Kristina Sheldrup - User testing
+Kenneth Collins - Peer Feedback
+Camilla Cheyenne Campbell- Peer Feedback
+Charlotte Valset -Peer Feedback
+Linda Mostre - Peer Feedback
+
+
+
+
+# Project Exam 1
 
 ## Figma Prototype
 
